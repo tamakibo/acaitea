@@ -1,0 +1,674 @@
+:root {
+    --pinky: #e6abe1;
+    --green: #496B48;
+    --brownie: #EADDCC;
+    --monblanc: #f5f5f5;
+    --acai: #C6443A;
+    --yellow: #E5C160;
+    --black: #272727;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'ptsans';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* FONT */
+
+@font-face {
+    font-family: 'ptsans';
+    src: url('PTSerif-Regular.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'jap';
+    src: url('KleeOne-SemiBold.ttf') format('truetype');
+
+}
+
+
+
+/* END FONT */
+
+body {
+    background-color: var(--brownie);
+    display: grid;
+    grid-template-areas:
+        "hdr hdr hdr hdr"
+        "mn mn mn mn"
+        "ftr ftr ftr ftr"
+    ;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    position: relative;
+
+}
+
+
+header {
+   
+    grid-area: hdr;
+    width: 100%;
+    background-color: var(--acai);
+    height: 90px;
+    font-size: 1.8rem;
+    z-index: 999;
+    list-style: none;
+    display: flex; 
+    flex-direction: row;   
+    align-items: center;
+     justify-content: center;
+     position: relative;
+      position: fixed;
+}
+.pages1Wrapped input[type="text"] {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  background-color: var(--monblanc);
+  border: solid var(--acai);
+  color: #333;
+  width: 200px;
+  margin-right: 20px;
+}
+.pages1Wrapped{
+    width: 100vw;
+      display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6rem;
+   
+}
+.pages1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+#logo{
+    position: absolute;
+    width: 10rem; 
+    transform: translateY(-30%); 
+    left: 6rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--monblanc);
+    font-size: normal;
+  }
+
+
+
+
+
+nav .pages2 {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     justify-content: center;
+    gap: 10vw;
+}
+
+nav ul img#logo{
+    position: absolute;
+    left: 8vw;
+
+}
+
+
+
+
+
+
+.containerBody {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 0;
+    grid-area: mn;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+/* BUTTON */
+
+.buttonStyle {
+ 
+    background-color: var(--yellow);
+    color: var(--brownie);
+    border-color: transparent;
+    margin-top: 3.2rem;
+    border-radius: 20px;
+    height: 5.2rem;
+    z-index: 1;
+    cursor: pointer;
+    font-family: 'robotorbold';
+    font-size: 2.0rem;
+    font-family: 'ptsans';
+    justify-content: center;
+    font-weight: bolder;
+    color: var(--black);
+
+}
+
+ .buttonStyle:hover {
+    border-color: var(--acai);
+    border-style: solid;
+    border-width: 0.5rem;
+}
+
+ .buttonStyle:active {
+    background-color: var(--green);
+    border-color: transparent;
+}
+ 
+
+
+
+
+/* BODY Product */
+.productTeaCollection {
+    background-color: var(--brownie);
+    background-image: url("img/shopBackground.jpg");;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+ 
+}
+
+.productTeaCollection p {
+    font-size: 3.4rem;
+    font-family: 'ptsans';
+    font-weight: bolder;
+   /*  color: var(--monblanc); */
+    max-width: 30ch;
+   margin: 30px 0px;
+
+}
+
+
+.product1{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.productTea img{
+    width: 17rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+  
+.productTea img[alt="product_1"] , .detail1 {
+    position: absolute;
+  top:15rem;
+    
+}
+.productTea img[alt="product_2"] ,.detail2{
+    position: absolute;
+    top:30vh;
+    left: 15vw;
+}
+.productTea img[alt="product_3"] ,.detail3{
+    position: absolute;
+    top:30vh;
+    right: 15vw;
+}
+.productTea img[alt="product_4"] ,.detail4{
+    position: absolute;
+    top:65vh;
+    left: 32vw;
+}
+ .productTea img[alt="product_5"] , .detail5 {
+    position: absolute;
+    top:65vh;
+    right: 32vw;
+}
+ 
+
+ .productTea .productTeaDetails{
+  /*   position: absolute;
+    top:50%;
+    left: 0;
+    right: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(0%) /* translateX(0) */;
+    text-align: center;
+    padding: 1rem;
+   /*  transform: translateY(70%); */
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    font-family: 'capriola';
+    color: var(--brownie); 
+    
+
+ }
+ 
+
+ .productTea:hover .productTeaDetails{
+    transform: translateY(90%);
+  /*   transform: translateX(0); */
+    opacity: 1;
+}
+
+.productTea:hover img {
+    opacity: 0.4;
+  } 
+  .productTeaDetails h3,h5{
+    font-size: 2.5rem;
+  
+ }
+
+/* FOOFIGHTER */
+.footer {
+    grid-row: 6;
+    grid-area: ftr;
+    width: 100%;
+    font-size: 1.8rem;
+    background-color: var(--green);
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    color: var(--brownie);
+    width: 100%;
+   
+
+
+}
+
+
+
+.footer p {
+    padding-top: 0.7rem;
+    max-width: 35ch;
+    font-family: 'ptsans';
+    font-weight:normal;
+    font-size: 1.6rem ;
+
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    margin: 0vw 4vw;
+}
+.footer h3 {
+    font-family: 'ptsans';
+    padding-bottom: 0.3rem;
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.socials{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer ul li a img {
+    width: 25px;
+    height: auto;
+    margin: 0.6rem;
+}
+
+.footerFin {
+    background-color: var(--monblanc);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.footerFin p{
+    padding: 0.9rem;
+    color: var(--black);
+    font-family: 'ptsans';
+    font-weight:normal;
+    font-size: 1.6rem ;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .productTeaCollection {
+        background-color: var(--brownie);
+        background-image: url("shopBackground.jpg");;
+        background-size: cover;
+        width: 100vw;
+        position: relative;
+        height: 100vh;
+     
+    }
+    
+    .productTeaCollection p {
+        font-size: 3.4rem;
+        font-family: 'ptsans';
+        font-weight: bolder;
+       /*  color: var(--monblanc); */
+        max-width: 30ch;
+       margin: 30px 0px;
+    
+    }
+    
+    
+    .product1{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+    .productTea img{
+        width: 17rem;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+      
+    .productTea img[alt="product_1"] , .detail1 {
+        position: absolute;
+      top:15rem;
+        
+    }
+    .productTea img[alt="product_2"] ,.detail2{
+        position: absolute;
+        top:30vh;
+        left: 15vw;
+    }
+    .productTea img[alt="product_3"] ,.detail3{
+        position: absolute;
+        top:30vh;
+        right: 15vw;
+    }
+    .productTea img[alt="product_4"] ,.detail4{
+        position: absolute;
+        top:65vh;
+        left: 25vw;
+    }
+     .productTea img[alt="product_5"] , .detail5 {
+        position: absolute;
+        top:65vh;
+        right: 25vw;
+    }
+     
+    
+     .productTea .productTeaDetails{
+      /*   position: absolute;
+        top:50%;
+        left: 0;
+        right: 0; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateY(0%) /* translateX(0) */;
+        text-align: center;
+        padding: 1rem;
+       /*  transform: translateY(70%); */
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        font-family: 'capriola';
+        color: var(--brownie); 
+        
+    
+     }
+     
+    
+     .productTea:hover .productTeaDetails{
+        transform: translateY(90%);
+      /*   transform: translateX(0); */
+        opacity: 1;
+    }
+    
+    .productTea:hover img {
+        opacity: 0.4;
+      } 
+      .productTeaDetails h3,h5{
+        font-size: 2.5rem;
+      
+     }
+    
+     
+}
+
+@media screen and (max-width: 1000px) {
+    .productTeaCollection {
+        background-color: var(--brownie);
+        background-image: url("shopBackground.jpg");;
+        background-size: cover;
+        width: 100vw;
+        position: relative;
+        height: 100vh;
+     
+    }
+    
+    .productTeaCollection p {
+        font-size: 3.4rem;
+        font-family: 'ptsans';
+        font-weight: bolder;
+       /*  color: var(--monblanc); */
+        max-width: 30ch;
+       margin: 30px 0px;
+    
+    }
+    
+    
+    .product1{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+    .productTea img{
+        width: 15rem;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+      
+    .productTea img[alt="product_1"] , .detail1 {
+        position: absolute;
+      top:15rem;
+        
+    }
+    .productTea img[alt="product_2"] ,.detail2{
+        position: absolute;
+        top:30vh;
+        left: 15vw;
+    }
+    .productTea img[alt="product_3"] ,.detail3{
+        position: absolute;
+        top:30vh;
+        right: 15vw;
+    }
+    .productTea img[alt="product_4"] ,.detail4{
+        position: absolute;
+        top:65vh;
+        left: 25vw;
+    }
+     .productTea img[alt="product_5"] , .detail5 {
+        position: absolute;
+        top:65vh;
+        right: 25vw;
+    }
+     
+    
+     .productTea .productTeaDetails{
+      /*   position: absolute;
+        top:50%;
+        left: 0;
+        right: 0; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateY(0%) /* translateX(0) */;
+        text-align: center;
+        padding: 1rem;
+       /*  transform: translateY(70%); */
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        font-family: 'capriola';
+        color: var(--brownie); 
+        
+    
+     }
+     
+    
+     .productTea:hover .productTeaDetails{
+        transform: translateY(90%);
+      /*   transform: translateX(0); */
+        opacity: 1;
+    }
+    
+    .productTea:hover img {
+        opacity: 0.4;
+      } 
+      .productTeaDetails h3,h5{
+        font-size: 2.5rem;
+      
+     }
+    
+     
+}
+ 
+
+@media screen and (max-width: 650px) {
+    #logo{
+        position: absolute;
+        width: 8rem; 
+       /*  transform: translateY(-30%);  */
+       margin-left: 0;
+       left: 2rem;
+       
+    }
+    .pages1Wrapped{
+        padding-right: 3rem;
+    }
+    
+    .productTeaCollection {
+        background-color: var(--brownie);
+        background-image: url("shopBackground.jpg");;
+        background-size: cover;
+        width: 100vw;
+        position: relative;
+        height: 100vh;
+     
+    }
+    
+    .productTeaCollection p {
+        font-size: 3.4rem;
+        font-family: 'ptsans';
+        font-weight: bolder;
+       /*  color: var(--monblanc); */
+        max-width: 30ch;
+       margin: 30px 0px;
+    
+    }
+    
+    
+    .product1{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+    .productTea img{
+        width: 10rem;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+      
+    .productTea img[alt="product_1"] , .detail1 {
+        position: absolute;
+      top:15rem;
+        
+    }
+    .productTea img[alt="product_2"] ,.detail2{
+        position: absolute;
+        top:40vh;
+        left: 15vw;
+    }
+    .productTea img[alt="product_3"] ,.detail3{
+        position: absolute;
+        top:40vh;
+        right: 15vw;
+    }
+    .productTea img[alt="product_4"] ,.detail4{
+        position: absolute;
+        top:65vh;
+        left: 25vw;
+    }
+     .productTea img[alt="product_5"] , .detail5 {
+        position: absolute;
+        top:65vh;
+        right: 25vw;
+    }
+     
+    
+     .productTea .productTeaDetails{
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateY(0%) /* translateX(0) */;
+        text-align: center;
+        padding: 1rem;
+       
+       /*  transform: translateY(70%); */
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        font-family: 'capriola';
+        color: var(--brownie); 
+        
+        
+    
+     }
+     
+    
+     .productTea:hover .productTeaDetails{
+        transform: translateY(60%);
+      /*   transform: translateX(0); */
+        opacity: 1;
+    }
+    
+    .productTea:hover img {
+        opacity: 0.4;
+      } 
+      .productTeaDetails h3,h5{
+        font-size: 1.8rem;
+      
+     }
+    
+}
